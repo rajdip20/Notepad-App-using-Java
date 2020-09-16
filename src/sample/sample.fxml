@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f1f1f1; -fx-border-color: black; -fx-border-width: 0.5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <MenuBar style="-fx-background-color: #b0c4de">
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <MenuItem onAction="#newFile" text="New" />
+                        <MenuItem onAction="#openFile" text="Open..." />
+                        <MenuItem onAction="#saveFile" text="Save" />
+                        <MenuItem onAction="#saveAsFile" text="Save As..." />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#exitApp" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu text="Edit">
+                    <items>
+                        <MenuItem onAction="#UndoText" text="Undo" />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#CutText" text="Cut" />
+                        <MenuItem onAction="#CopyText" text="Copy" />
+                        <MenuItem onAction="#PasteText" text="Paste" />
+                        <MenuItem onAction="#DeleteText" text="Delete" />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#SelectAll" text="Select All" />
+                        <MenuItem onAction="#DateTime" text="Time/Date" />
+                    </items>
+                </Menu>
+                <Menu text="Format">
+                    <items>
+                        <CheckMenuItem disable="false" onAction="#WordWrap" text="Word Wrap" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <TextArea fx:id="textPane" style="-fx-background-insets: 0,0,1,2;">
+        </TextArea>
+    </center>
+</BorderPane>
